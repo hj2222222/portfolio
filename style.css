@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "HSSaemaul-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSSaemaul-Regular.woff")
+  font-family: "Cafe24Ssurround";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff")
     format("woff");
   font-weight: normal;
   font-style: normal;
@@ -25,7 +25,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "HSSaemaul-Regular", sans-serif;
+  font-family: "Cafe24Ssurround", sans-serif;
   margin: 0;
 }
 
@@ -132,4 +132,36 @@ p {
   padding: 8px 12px;
   border: 2px solid var(--color-white);
   border-radius: var(--size-border-radius);
+}
+.section {
+  padding: 50px;
+  text-align: center;
+  margin: auto;
+}
+.section__container {
+  max-width: 1200px;
+  margin: auto;
+}
+.intro__majors {
+  display: flex;
+  justify-content: space-around;
+  margin: 80px 0;
+}
+.major_icon {
+  width: 170px;
+  height: 170px;
+  line-height: 170px;
+  font-size: 70px;
+  margin: auto;
+  color: var(--color-pink);
+  border: 1px solid var(--color-pink);
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+.major_icon i {
+  transition: all var(--animation-duration) ease;
+}
+.major_icon:hover {
+  color: var(--color-pink);
+  transform: rotate(-30deg) scale(1.1);
 }
