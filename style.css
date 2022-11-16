@@ -104,6 +104,14 @@ p {
 .navbar__menu {
   display: flex;
 }
+
+.navbar__menu.open {
+  display: block;
+}
+.navbar__menu__item.clicks {
+  border: 1px solid white;
+  border-radius: var(--size-border-radius);
+}
 #navbar.navbar--bold {
   background-color: rgb(110, 238, 234);
   /* padding: 10px; */
@@ -122,6 +130,8 @@ p {
   background-color: #abd0bc;
   font-size: 17px;
   color: var(--color-black);
+  border: 1px solid white;
+  border-radius: var(--size-border-radius);
   border-radius: var(--size-border-radius);
 }
 .navbar__toggle-btn {
@@ -156,6 +166,9 @@ p {
   padding: 8px 12px;
   border: 2px solid var(--color-white);
   border-radius: var(--size-border-radius);
+}
+.home__contact:hover {
+  background-color: #f4fb73;
 }
 #intro {
   background: url(./image/nt4.png) center/cover no-repeat;
@@ -458,4 +471,10 @@ contact__links {
     width: 80px;
     height: 80px;
   }
+}
+.project.none {
+  display: none;
+}
+.project.see {
+  display: "";
 }
