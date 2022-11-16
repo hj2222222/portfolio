@@ -12,6 +12,7 @@
   --color-pink: #e8adb3;
   --color-gray: #837e7ee6;
   --color-yellow: #fff7d1;
+  --color-deeppink: deeppink;
 
   --font-large: 48px;
   --font-mediun: 28px;
@@ -73,11 +74,27 @@ p {
 }
 /* navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px;
   background-color: var(--color-pink);
+  z-index: 1;
+  transition: all var(--animation-duration) ease-in-out;
+}
+#arrow {
+  z-index: 2;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: none;
+  color: var(--color-white);
+  font-size: var(--font-mediun);
+}
+#arrow.arrow--display {
+  display: block;
 }
 .navbar__logo {
   font-size: var(--font-mediun);
@@ -86,6 +103,10 @@ p {
 }
 .navbar__menu {
   display: flex;
+}
+#navbar.navbar--bold {
+  background-color: rgb(110, 238, 234);
+  /* padding: 10px; */
 }
 .navbar__menu__item {
   padding: 8px 12px;
@@ -121,6 +142,7 @@ p {
   height: 250px;
   border-radius: 30%;
   border: 2px solid var(--color-white);
+  margin-top: 100px;
 }
 .home__title,
 .home__description {
