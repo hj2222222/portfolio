@@ -1,19 +1,19 @@
 "use strict";
 //스크롤에 따른 메뉴바 색상처리
-const navbar = document.querySelector("#navbar");
-const home = document.querySelector(".home__container");
-const navbarHeight = home.getBoundingClientRect().height;
-const arrow1 = document.querySelector("#arrow");
-console.log(navbarHeight);
-document.addEventListener("scroll", () => {
-  if (window.scrollY > navbarHeight) {
-    navbar.classList.add("navbar--bold");
-    arrow1.classList.add("arrow--display");
-  } else {
-    navbar.classList.remove("navbar--bold");
-    arrow1.classList.remove("arrow--display");
-  }
-});
+// const navbar = document.querySelector("#navbar");
+// const home = document.querySelector(".home__container");
+// const navbarHeight = home.getBoundingClientRect().height;
+// const arrow1 = document.querySelector("#arrow");
+// console.log(navbarHeight);
+// document.addEventListener("scroll", () => {
+//   if (window.scrollY > navbarHeight) {
+//     navbar.classList.add("navbar--bold");
+//     arrow1.classList.add("arrow--display");
+//   } else {
+//     navbar.classList.remove("navbar--bold");
+//     arrow1.classList.remove("arrow--display");
+//   }
+// });
 
 //스크롤에 따른 메뉴바 고정
 
@@ -96,6 +96,16 @@ project.addEventListener("click", (e) => {
     }
   }
   if (filter == "FrontEnd") {
+    for (let i = 0; i < project_1.length; i++) {
+      if (project_1[i].dataset.type == filter) {
+        project_1[i].classList.add("see");
+        project_1[i].classList.remove("none");
+      } else {
+        project_1[i].classList.add("none");
+      }
+    }
+  }
+  if (filter == "Analyze") {
     for (let i = 0; i < project_1.length; i++) {
       if (project_1[i].dataset.type == filter) {
         project_1[i].classList.add("see");
