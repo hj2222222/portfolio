@@ -150,6 +150,8 @@ p {
   background: url(./image/nt2.png) bottom/cover no-repeat;
   padding: 40px;
   text-align: center;
+  padding-top: 300px;
+  padding-bottom: 300px;
 }
 .home__avatar {
   width: 250px;
